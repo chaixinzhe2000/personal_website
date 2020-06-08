@@ -1,0 +1,103 @@
+// declaring variables
+$paleblue: #d8e7f4;
+$navy: #011434;
+
+html,
+body {
+	background-color: $paleblue;
+}
+
+.flexbox-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	margin-top: 10vh;
+}
+
+.nav-bar {
+	display: flex;
+	width: 60%;
+	justify-content: right;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+a {
+	color: $navy;
+	text-decoration: none;
+}
+
+.headtitle {
+	font-family: 'Inter', sans-serif;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.navbar-text {
+	font-family: 'Josefin Sans', sans-serif;
+	margin-left: 2vw;
+	margin-top: 3px;
+	color: $navy;
+}
+
+#github-icon {
+	height: 1.6rem;
+	margin-top: 5px;
+}
+
+#linkedin-icon {
+	height: 1.5rem;
+	margin-bottom: 1.5px;
+	fill: $paleblue;
+}
+
+#greetings-wrapper {
+	margin-top: 35vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	width: 40%;
+	color: $navy;
+}
+
+#greetings-heading {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	font-size: 2.5rem;
+}
+
+#greetings-text {
+	margin-top: 10px;
+	font-family: 'Crimson Text', serif;
+	font-size: 1.6rem;
+}
+
+#signature {
+	height: 50px;
+	margin-top: 5px;
+}
+
+.link {
+	text-decoration: underline;
+	font-size: 1.4rem;
+}
+
+@media (max-width: 880px) {
+	#greetings-wrapper {
+		margin-top: 15vh;
+		margin-left: 10vw;
+		margin-right: 10vw;
+		width: 80%;
+	}
+}
+
+@media (max-width: 672px) {
+	#github-icon {
+		margin-top: 10px;
+	}
+	
+	#github-icon {
+		margin-top: 10px;
+	}
+}
