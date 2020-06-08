@@ -18,7 +18,6 @@ body {
 
 .nav-bar {
 	display: flex;
-	width: 60%;
 	justify-content: right;
 	align-items: center;
 	flex-wrap: wrap;
@@ -89,15 +88,5 @@ a {
 		margin-left: 10vw;
 		margin-right: 10vw;
 		width: 80%;
-	}
-}
-
-@media (max-width: 672px) {
-	#github-icon {
-		margin-top: 10px;
-	}
-	
-	#github-icon {
-		margin-top: 10px;
 	}
 }
