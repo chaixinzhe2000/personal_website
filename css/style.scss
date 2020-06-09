@@ -11,8 +11,8 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-left: 10vw;
-	margin-right: 10vw;
+	margin-left: 15vw;
+	margin-right: 15vw;
 	margin-top: 10vh;
 }
 
@@ -28,15 +28,9 @@ a {
 	text-decoration: none;
 }
 
-.headtitle {
-	font-family: 'Inter', sans-serif;
-	font-size: 2rem;
-	font-weight: 600;
-}
-
 .navbar-text {
-	font-family: 'Josefin Sans', sans-serif;
-	margin-left: 2vw;
+	font-family: "Josefin Sans", sans-serif;
+	margin-left: 1.7vw;
 	margin-top: 3px;
 	color: $navy;
 }
@@ -65,15 +59,15 @@ a {
 }
 
 #greetings-wrapper {
-	margin-top: 35vh;
-	margin-left: 10vw;
-	margin-right: 10vw;
+	margin-top: 40vh;
+	margin-left: 15vw;
+	margin-right: 15vw;
 	width: 40%;
 	color: $navy;
 }
 
 #greetings-heading {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-weight: 800;
 	font-size: 2.5rem;
 	color: $navy;
@@ -82,9 +76,10 @@ a {
 
 #greetings-text {
 	margin-top: 10px;
-	font-family: 'Crimson Text', serif;
+	margin-bottom: 15vh;
+	font-family: "Crimson Text", serif;
 	color: $navy;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 }
 
 #signature {
@@ -96,25 +91,28 @@ a {
 	text-decoration: underline;
 	font-size: 90%;
 	text-transform: uppercase;
+	color: $navy;
 }
 
 @media (max-width: 880px) {
 	#greetings-wrapper {
 		margin-top: 15vh;
-		margin-left: 10vw;
-		margin-right: 10vw;
-		width: 80%;
+		margin-left: 15vw;
+		margin-right: 15vw;
+		width: 70vw;
 	}
 }
 
 .section-wrapper {
-	margin-left: 10vw;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	color: $navy;
 }
 
 .division-line {
-	margin-top: 20vh;
-	margin-bottom: 5vh;
-	font-family: 'Inter', sans-serif;
+	margin-top: 3vh;
+	margin-bottom: 2vh;
+	font-family: "Inter", sans-serif;
 	font-size: 1rem;
 	font-weight: 800;
 }
@@ -124,14 +122,14 @@ a {
 }
 
 .h1 {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-size: 1.6rem;
 	font-weight: 800;
-	margin-right: 5vw;
+	width: 260px;
 }
 
 .subject-title {
-	font-family: 'Crimson Text', serif;
+	font-family: "Crimson Text", serif;
 	font-style: italic;
 	font-size: 1.6rem;
 	margin-bottom: -10px;
@@ -140,17 +138,76 @@ a {
 .fineprint {
 	color: grey;
 	text-transform: uppercase;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	font-weight: 300;
 	margin-bottom: -10px;
 }
 
 .supplement-text {
-	width: 70%;
+	width: 50vw;
 	font-size: 1.2rem;
-	font-family: 'Crimson Text', serif;
+	font-family: "Crimson Text", serif;
 }
 
 .items {
-	margin-bottom: 5vh;
+	margin-bottom: 3vh;
+}
+
+hr.f {
+	margin-top: 3rem;
+	margin-bottom: 0;
+	border-width: 0;
+	border-top: 1px solid #8a9ca8;
+	text-align: left;
+	margin-left: 15vw;
+	margin-right: 15vw;
+}
+
+.footer-flex {
+	display: flex;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	height: 10vh;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer-nav {
+	display: flex;
+	align-items: center;
+}
+.footer-logo {
+	margin-left: 0;
+	margin-right: 1.2vw;
+	margin-top: 3px;
+	color: $navy;
+}
+
+#footer-text {
+	margin-top: 5px;
+	font-size: 1rem;
+	font-family: "Crimson Text", serif;
+}
+
+#github-icon-footer {
+	height: 1.3rem;
+	margin-top: 3.5px;
+}
+
+#github-icon-footer:hover {
+	filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(135deg) brightness(90%) contrast(80%);
+}
+
+#linkedin-icon-footer {
+	height: 1.3rem;
+	fill: $paleblue;
+}
+
+#linkedin-icon-footer:hover {
+	filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(135deg) brightness(90%) contrast(80%);
+}
+
+#signature-footer {
+	height: 30px;
+	margin-top: 7px;
 }
