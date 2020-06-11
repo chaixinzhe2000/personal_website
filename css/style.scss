@@ -244,19 +244,19 @@ hr.f {
 	display: block;
   	margin-left: auto;
 	margin-right: auto;
-	margin-top: 0.75vw;
-	width: 21.5vw;
+	margin-top: 1vw;
+	width: 21vw;
 }
 
 .project-title {
 	@extend .subject-title;
 	margin-top: 25px;
-	margin-left: 0.75vw;
+	margin-left: 1vw;
 	font-weight: 550;
 }
 
 .project-info {
-	margin-left: 0.75vw;
+	margin-left: 1vw;
 	margin-top: 15px;
 	color: grey;
 	text-transform: uppercase;
