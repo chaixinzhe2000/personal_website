@@ -1,6 +1,12 @@
 // declaring variables
-$paleblue: #d8e7f4;
+$paleblue: #e8f1f8;
 $navy: #011434;
+$paleblue-hover: #dde9f8;
+
+.page-gap {
+	margin-left: 15vw;
+	margin-right: 15vw;
+}
 
 html,
 body {
@@ -11,8 +17,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-left: 15vw;
-	margin-right: 15vw;
+	@extend .page-gap;
 	margin-top: 10vh;
 }
 
@@ -60,8 +65,7 @@ a {
 
 #greetings-wrapper {
 	margin-top: 40vh;
-	margin-left: 15vw;
-	margin-right: 15vw;
+	@extend .page-gap;
 	width: 40%;
 	color: $navy;
 }
@@ -97,15 +101,13 @@ a {
 @media (max-width: 880px) {
 	#greetings-wrapper {
 		margin-top: 15vh;
-		margin-left: 15vw;
-		margin-right: 15vw;
+		@extend .page-gap;
 		width: 70vw;
 	}
 }
 
 .section-wrapper {
-	margin-left: 15vw;
-	margin-right: 15vw;
+	@extend .page-gap;
 	color: $navy;
 }
 
@@ -159,14 +161,12 @@ hr.f {
 	border-width: 0;
 	border-top: 1px solid #8a9ca8;
 	text-align: left;
-	margin-left: 15vw;
-	margin-right: 15vw;
+	@extend .page-gap;
 }
 
 .footer-flex {
 	display: flex;
-	margin-left: 15vw;
-	margin-right: 15vw;
+	@extend .page-gap;
 	height: 10vh;
 	align-items: center;
 	justify-content: space-between;
@@ -210,4 +210,71 @@ hr.f {
 #signature-footer {
 	height: 30px;
 	margin-top: 7px;
+}
+
+.headline {
+	@extend .page-gap;
+	@extend #greetings-heading;
+	text-transform: uppercase;
+	margin-top: 10vh;
+}
+
+.projects-flex-container {
+	@extend .page-gap;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 70vw;
+	flex-wrap:wrap;
+	margin-top: 8vh;
+}
+
+.project-container {
+	width: 23vw;
+	height: 650px;
+	margin-right: 0.32vw;
+
+}
+
+.project-container:hover {
+	background-color:$paleblue-hover;
+}
+
+.project-featured-image {
+	display: block;
+  	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.75vw;
+	width: 21.5vw;
+}
+
+.project-title {
+	@extend .subject-title;
+	margin-top: 25px;
+	margin-left: 0.75vw;
+	font-weight: 550;
+}
+
+.project-info {
+	margin-left: 0.75vw;
+	margin-top: 15px;
+	color: grey;
+	text-transform: uppercase;
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 300;
+	font-size: 0.9rem
+}
+
+.project-description {
+	display: block;
+  	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.75vw;
+	width: 21vw;
+	font-size: 1.1rem;
+	font-family: "Crimson Text", serif;
+}
+
+.white-space-footer {
+	height: 15vh;
 }
