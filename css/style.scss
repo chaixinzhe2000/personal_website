@@ -73,10 +73,9 @@ a {
 
 #greetings-heading {
 	font-family: "Josefin Sans", sans-serif;
-	font-weight: 800;
+	font-weight: 600;
 	font-size: 2.5rem;
 	color: $navy;
-	text-shadow: 2px 2px 4px #ffffff;
 }
 
 #greetings-text {
@@ -219,6 +218,7 @@ hr.f {
 	@extend #greetings-heading;
 	text-transform: uppercase;
 	margin-top: 10vh;
+	font-weight: 800;
 }
 
 .projects-flex-container {
@@ -227,7 +227,7 @@ hr.f {
 	justify-content: flex-start;
 	align-items: center;
 	width: 70vw;
-	flex-wrap:wrap;
+	flex-wrap: wrap;
 	margin-top: 8vh;
 }
 
@@ -235,16 +235,15 @@ hr.f {
 	width: 23vw;
 	height: 680px;
 	margin-right: 0.32vw;
-
 }
 
 .project-container:hover {
-	background-color:$paleblue-hover;
+	background-color: $paleblue-hover;
 }
 
 .project-featured-image {
 	display: block;
-  	margin-left: auto;
+	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1vw;
 	width: 21vw;
@@ -264,12 +263,12 @@ hr.f {
 	text-transform: uppercase;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: 300;
-	font-size: 0.9rem
+	font-size: 0.9rem;
 }
 
 .project-description {
 	display: block;
-  	margin-left: auto;
+	margin-left: auto;
 	margin-right: auto;
 	margin-top: 0.75vw;
 	width: 21vw;
@@ -279,4 +278,67 @@ hr.f {
 
 .white-space-footer {
 	height: 15vh;
+}
+
+.project-description-fineprint {
+	@extend .fineprint;
+	@extend .page-gap;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.blog-container {
+	margin-left: 15vw;
+	margin-right: 15vw;
+	margin-top: 10vh;
+}
+
+.blog-text-wrapper {
+	margin-left: 4.5vw;
+	margin-right: 4.5vw;
+}
+
+.blog-subtitle {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 1.6rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin-bottom: 1.5vh;
+	margin-top: 5vh;
+	color: $navy;
+}
+
+.paragraph {
+	font-size: 1.25rem;
+	font-family: "Crimson Text", serif;
+	color: $navy;
+	position: relative;
+	z-index: 2;
+	margin-bottom: 1vh;
+}
+
+.full-width-picture {
+	width: 100%;
+}
+
+.screely {
+	margin-top: -50px;
+	margin-bottom: -70px;
+	z-index: -1;
+}
+
+.non-screely {
+	margin: 100px;
+}
+
+img {
+    align-self: center;
+}
+
+.right-picture {
+	float: right;
+	width: 28vw;
+	margin-top: 1vh;
+	margin-left: 2vw;
+	margin-bottom: 2vh;
 }

@@ -1,58 +1,155 @@
-For my final project in the Introduction to Object-Oriented Programming (CS15), we were tasked with building a fully
-functional game within the 4 options they provide. Flappy Bird was offered as an option for the first time that year,
-but I chose it without hesitation because the TA told me we will implement a Neural Network that trains the bird to jump
-on its own. Though I had no idea what it was, I decided to give it a try.
+<!DOCTYPE html>
+<html>
 
-Gameplay
-As you open the game, a welcome screen will ask you how you want to play this game: if you want to try it yourself and
-enjoy some Flappy Bird time, click “Humanity First”! However, if you’d like to see birds jumping freely without your
-intervention, choose “AI Player”, and the birds will start learning right away.
+<head>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;531;600;700;800;900&family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+		rel="stylesheet">
+	<meta name="viewport" content="width=1920">
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+	<title>Xinzhe Chai | Projects</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
 
-If you choose the latter, a few learning parameters will be provided at the bottom because the birds can quickly be very
-smart — so smart that there might be no difference to an observer as it keeps on jumping! After a few generations of
-evolution, the birds can easily jump for more than a 1000 pipes in the game, an achievement that I have never even
-gotten close to. The vermilion-colored info bar also provides the users with buttons to fast-forward the learning
-process, and this functionality is especially useful when I need to observe the overall evolution trend (100
-generations) but don’t have time to wait too long.
+<body>
+	<div class="flexbox-container header">
+		<a href="https://xchai.me/" class="headtitle"> <img id="signature" src="../images/icons/signature.png"
+				alt="signature">
+		</a>
+		<div class="nav-bar">
+			<a href="/projects/overview.html" class="navbar-text">PROJECTS</a>
+			<a href="/documents/xinzhe_chai_resume.pdf" class="navbar-text">RÉSUMÉ</a>
+			<a href="https://www.chai.photography/" class="navbar-text">PHOTOGRAPHY</a>
+			<div>
+				<a href="https://github.com/chaixinzhe2000" class="navbar-text"> <img src="../images/icons/github.svg"
+						alt="GitHub" id="github-icon"> </a>
+				<a href="https://www.linkedin.com/in/chaixinzhe/" class="navbar-text"> <img
+						src="../images/icons/linkedin.svg" alt="Linkedin" id="linkedin-icon"> </a>
+			</div>
+		</div>
+	</div>
 
-Challenges
-Figuring out the object-oriented design, understanding Neural Network and solving the bug brought out by Array/ArrayList
-were probably the most difficult challenges I had to overcome in this project. We started this project by writing the
-traditional Flappy Bird game, which has one bird only and was fairly simple. However, as we moved on to implement the
-learning part of the project, the specification asked us to model a population with 50 birds, each is equipped with a
-Neural Network so that they can make independent decisions.
+	<div class="headline">EVOLUTION</div>
+	<div class="project-description-fineprint" style="margin-top: 15px;">JAVA, JAVAFX / OBJECT-ORIENTED PROGRAMMING /
+		DECEMBER 2019</div>
 
-After some thinking and consultation with the course TA, I decided to have a Population class controlling the life and
-death of those birds, a NeuralNetwork class that includes all the thinking processes, and a Bird class that models the
-shape and movement of birds. In my original implementation, my Bird class actually extends the NeuralNetwork class. My
-idea was that if I extend the NeuralNetwork class, I could use all its methods, which is equivalent to having an
-independent brain for every bird. Upon further thinking, I found out that though the idea itself works, it was bad
-object-oriented design since Bird is not a type of NeuralNetwork, and its containment diagram would not make any sense.
-I later on changed my method and instantiated a NeuralNetwork instance in my Bird object — this also reflects the
-real-world situation — now whenever I create a new Bird, it comes with a brain, the NeuralNetwork.
+	<div class="blog-container">
+		<div class="blog-text-wrapper">
+			<div class="blog-subtitle">Introduction</div>
+			<div class="paragraph">
+				For my final project in the Introduction to Object-Oriented Programming (CS15), we were tasked with
+				building a fully functional game within the 4 options they provide. Flappy Bird was offered as an option
+				for the first time that year, but I chose it without hesitation because the TA told me we will implement
+				a Neural Network that trains the bird to jump on its own. Though I had no idea what it was, I decided to
+				give it a try.
+			</div>
+		</div>
+		<img class="full-width-picture screely" src="../images/projects/evolution/front-page.png"
+			alt="Flappy Bird Front Page">
+		<div class="blog-text-wrapper">
+			<div class="blog-subtitle">Gameplay</div>
+			<div class="text-picture">
+				<div class="paragraph-group">
+					<img class="right-picture" id="flappy-gameplay-picture"
+						src="../images/projects/evolution/flappy bird-gameplay.gif" alt="Flappy Bird Front Page">
+					<div class="paragraph">
+						As you open the game, a welcome screen will ask you how you want to play this game: if you want
+						to try it yourself and enjoy some Flappy Bird time, click “Humanity First”! However, if you’d
+						like to see birds jumping freely without your intervention, choose “AI Player”, and the birds
+						will start learning right away.
+					</div>
+					<div class="paragraph">
+						If you choose the latter, a few learning parameters will be provided at the bottom because the
+						birds can quickly be very smart — so smart that there might be no difference to an observer as
+						it keeps on jumping! After a few generations of evolution, the birds can easily jump for more
+						than a 1000 pipes in the game, an achievement that I have never even gotten close to. The
+						vermilion-colored info bar also provides the users with buttons to fast-forward the learning
+						process, and this functionality is especially useful when I need to observe the overall
+						evolution trend (100 generations) but don’t have time to wait too long.
+					</div>
+				</div>
 
-After figuring out the structure of the project, now it’s time to understand what Neural Networks are. After some
-initial research, I realized that the simplest form of a Neural Network is just a layer of input nodes, a hidden layer
-where weight is being added, and a final output layer. The activation function then takes the value of the final out,
-and decides whether the birds should jump or not. Though all numbers are randomly generated at the beginning, the birds
-will gradually evolve if I select the weight of the best bird of the last round. By applying a very minimal amount of
-random variation to the “smart weight”, the birds can eventually reach a point where they only die by accident — like
-humans, birds also make “poor judgement” sometimes!
+			</div>
+			<div class="blog-subtitle">Challenges</div>
+			<div class="paragraph">
+				Figuring out the object-oriented design, understanding Neural Network and solving the bug brought
+				out by Array/ArrayList were probably the most difficult challenges I had to overcome in this
+				project. We started this project by writing the traditional Flappy Bird game, which has one bird
+				only and was fairly simple. However, as we moved on to implement the learning part of the project,
+				the specification asked us to model a population with 50 birds, each is equipped with a Neural
+				Network so that they can make independent decisions.
+			</div>
+			<div class="paragraph">
+				Initially, I decided to have a Population class controlling the life and death of those birds, a
+				NeuralNetwork class that includes all the thinking processes, and a Bird class that models the shape
+				and movement of birds. In my original implementation, my Bird class actually extends the
+				NeuralNetwork class. My idea was that if I extend the NeuralNetwork class, I could use all its
+				methods, which is equivalent to having an independent brain for every bird. Upon further thinking, I
+				found out that though the idea itself works, it was bad object-oriented design since Bird is not a
+				type of NeuralNetwork, and its containment diagram would not make any sense. I later on changed my
+				method and instantiated a NeuralNetwork instance in my Bird object — this also reflects the
+				real-world situation — now whenever I create a new Bird, it comes with a brain, the NeuralNetwork.
+			</div>
+			<div class="paragraph">
+				After I decided on the structure of the project, now it’s time to understand what Neural Networks
+				are. After some initial research, I realized that the simplest form of a Neural Network is just a
+				layer of input nodes, a hidden layer where weight is being added, and a final output layer. The
+				activation function then takes the value of the final out, and decides whether the birds should jump
+				or not. Though all numbers are randomly generated at the beginning, the birds will gradually evolve
+				if I select the weight of the best bird of the last round. By applying a very minimal amount of
+				random variation to the “smart weight”, the birds can eventually reach a point where they only die
+				by accident — like humans, birds also make “poor judgement” sometimes!
+			</div>
+			<div class="paragraph">
+				The hardest problem I encountered was to fix the bug induced by poor documentation. In my Population
+				class, I included 17 Array and ArrayList of different dimensions — some are for weights, some are
+				created to track the status of the bird, and the rest are used to record the statistics. Because
+				there were so many different Arrays, I struggled to differentiate each Array’s function, and the
+				specific data each dimension should hold. As a result, my application produces error messages at
+				every single keyframe, and my birds all die immediately upon spawning. I spent more than 10 hours
+				trying to debug using the println, however I yielded no result — the outputs are all random numbers
+				ranging from 0 to 1, and there is no way for me to identify the validity of the data. That was the
+				time I decided to rewrite the Population class; and this time, every time I created an Array, I
+				commented in the code about the type of data each dimension of the Array should hold. After a
+				complete overhaul, my birds finally started learning, and I was really proud.
+			</div>
+			<div class="blog-subtitle">Conclusion</div>
+			<div class="paragraph">
+				Evolution was definitely a highlight of my Object-oriented Programming (CS15) class. Afterall, I
+				think my biggest takeaway from this was that thorough planning beforehand is important, and the
+				proper documentation of variables and methods are critical. As the final project, I was able to put
+				everything I learned in the course — from EventHandler to Constructor Overloading — into use, and I
+				would highly recommend this project for the future generations of CS15 students.
+			</div>
+			<div class="blog-subtitle">Attachment</div>
+			<div class="paragraph">
+				<a href="../documents/evolution_write_up.pdf" class="link">Submitted Project Report (PDF)</a>
+			</div>
+		</div>
+	</div>
+	<div class="white-space-footer" style="height: 5vh;"></div>
 
-The hardest problem I encountered was to fix the bug induced by poor documentation. In my Population class, I included
-17 Array and ArrayList of different dimensions — some are for weights, some are created to track the status of the bird,
-and the rest are used to record the statistics. Because there were so many different Arrays, I struggled to
-differentiate each Array’s function, and the specific data each dimension should hold. As a result, my application
-produces error messages at every single keyframe, and my birds all die immediately upon spawning. I spent more than 10
-hours trying to debug using the println, however I yielded no result — the outputs are all random numbers ranging from 0
-to 1, and there is no way for me to identify the validity of the data. That was the time I decided to rewrite the
-Population class; and this time, every time I created an Array, I commented in the code about the type of data each
-dimension of the Array should hold. After a complete overhaul, my birds finally started learning, and I was really
-proud.
 
-Conclusion
-Evolution was definitely a highlight of my Object-oriented Programming (CS15) class. Afterall, I think my biggest
-takeaway from this was that thorough planning beforehand is important, and the proper documentation of variables and
-methods are critical. As the final project, I was able to put everything I learned in the course — from EventHandler to
-Constructor Overloading — into use, and I would highly recommend this project for the future generations of CS15
-students.
+	<hr class=" f">
+	</hr>
+
+	<div class="footer-flex">
+		<div class="footer-nav">
+			<a href="https://github.com/chaixinzhe2000" class="footer-logo"> <img src="../images/icons/github.svg"
+					alt="GitHub" id="github-icon-footer"> </a>
+			<a href="https://www.linkedin.com/in/chaixinzhe/" class="footer-logo" style="margin-top: 5px;"> <img
+					src="../images/icons/linkedin.svg" alt="Linkedin" id="linkedin-icon-footer"> </a>
+			<a class="footer-logo" id="footer-text">© 2020 Xinzhe Chai</a>
+		</div>
+		<a href="https://xchai.me/" class="headtitle"> <img id="signature-footer" src="../images/icons/signature.png"
+				alt="signature"> </a>
+	</div>
+
+</body>
+
+</html>
