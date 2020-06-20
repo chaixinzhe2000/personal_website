@@ -214,10 +214,8 @@ hr.f {
 }
 
 .headline {
-	@extend .page-gap;
 	@extend #greetings-heading;
 	text-transform: uppercase;
-	margin-top: 10vh;
 	font-weight: 800;
 }
 
@@ -282,7 +280,6 @@ hr.f {
 
 .project-description-fineprint {
 	@extend .fineprint;
-	@extend .page-gap;
 	margin-top: 5px;
 	margin-bottom: 0;
 }
@@ -342,3 +339,28 @@ img {
 	margin-left: 2vw;
 	margin-bottom: 2vh;
 }
+
+.external-button {
+	padding: 16px 20px;
+	padding-top: 19px;
+	text-align: center;
+	display: inline-block;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 1rem;
+	font-weight: 800;
+	margin-left: 30px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 4px;
+  }
+  
+  .external-button {
+	background-color: transparent; 
+	color: $navy; 
+	border: 2px solid $navy;
+  }
+  
+  .external-button:hover {
+	background-color: $navy;
+	color: white;
+  }

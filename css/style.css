@@ -1,4 +1,4 @@
-.page-gap, .project-description-fineprint, .projects-flex-container, .headline, .footer-flex, hr.f, .section-wrapper, #greetings-wrapper, .flexbox-container {
+.page-gap, .projects-flex-container, .footer-flex, hr.f, .section-wrapper, #greetings-wrapper, .flexbox-container {
   margin-left: 15vw;
   margin-right: 15vw;
 }
@@ -204,7 +204,6 @@ hr.f {
 
 .headline {
   text-transform: uppercase;
-  margin-top: 10vh;
   font-weight: 800;
 }
 
@@ -324,6 +323,31 @@ img {
   margin-top: 1vh;
   margin-left: 2vw;
   margin-bottom: 2vh;
+}
+
+.external-button {
+  padding: 16px 20px;
+  padding-top: 19px;
+  text-align: center;
+  display: inline-block;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-left: 30px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.external-button {
+  background-color: transparent;
+  color: #011434;
+  border: 2px solid #011434;
+}
+
+.external-button:hover {
+  background-color: #011434;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
