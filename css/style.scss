@@ -352,15 +352,15 @@ img {
 	transition-duration: 0.4s;
 	cursor: pointer;
 	border-radius: 4px;
-  }
+}
   
-  .external-button {
+.external-button {
 	background-color: transparent; 
 	color: $navy; 
 	border: 2px solid $navy;
-  }
+}
   
-  .external-button:hover {
+.external-button:hover {
 	background-color: $navy;
 	color: white;
-  }
+}
