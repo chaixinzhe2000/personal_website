@@ -331,12 +331,20 @@ img {
     align-self: center;
 }
 
-.right-picture {
+.right-picture-label-wrapper {
 	float: right;
+	position: relative;
 	width: 28vw;
 	margin-top: 1vh;
 	margin-left: 2vw;
 	margin-bottom: 2vh;
+}
+
+.right-picture {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
 }
 
 .external-button {
@@ -371,6 +379,10 @@ img {
 
 .image-w-title {
 	width: 28.5vw;
+	height: 100%;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .horizontal-img-flexbox {
