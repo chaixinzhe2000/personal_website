@@ -364,3 +364,29 @@ img {
 	background-color: $navy;
 	color: white;
 }
+
+.image-w-title-wrapper {
+	position: relative;
+	width: 28.5vw;
+}
+
+.image-w-title {
+	width: 28.5vw;
+}
+
+.horizontal-img-flexbox {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.floating-label {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background-color: $navy;
+	color: white;
+	padding: 15px 20px 13px;
+	text-transform: uppercase;
+	font-family: "Josefin Sans", sans-serif;
+}
