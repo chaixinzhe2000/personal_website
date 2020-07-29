@@ -17,6 +17,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<script src="js/cursor.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170201729-1"></script>
 	<script>
@@ -31,6 +32,20 @@
 </head>
 
 <body>
+	<div class="cursor">
+		<div class="cursor__ball cursor__ball--big ">
+			<svg height="30" width="30">
+				<circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+			</svg>
+		</div>
+		
+		<div class="cursor__ball cursor__ball--small">
+			<svg height="10" width="10">
+				<circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+			</svg>
+		</div>
+	</div>
+
 	<div class="flexbox-container header">
 		<a href="https://xchai.me/" class="headtitle"> <img id="signature" src="/images/icons/signature.png"
 				alt="signature">
