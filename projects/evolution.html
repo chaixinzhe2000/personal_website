@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 	<head>
 		<link
@@ -15,12 +15,14 @@
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170201729-1"></script>
 		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
 
-		gtag('config', 'UA-170201729-1');
-	</script>
+			gtag('config', 'UA-170201729-1');
+		</script>
+		<!-- Cursor CSS -->
+		<link href="css/pointer.css" rel="stylesheet">
 		<title>Xinzhe Chai | Evolution</title>
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
@@ -166,7 +168,14 @@
 			<a href="https://xchai.me/" class="headtitle"> <img id="signature-footer" src="../images/icons/signature.png"
 					alt="signature"> </a>
 		</div>
-
 	</body>
 
+	<script src="js/pointer.js"></script>
+	<script>
+	init_pointer({
+		ringSize: 15,
+		ringClickSize: 12,
+	})
+	</script>
+	
 </html>

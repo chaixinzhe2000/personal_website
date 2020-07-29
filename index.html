@@ -26,9 +26,8 @@
 
 		gtag('config', 'UA-170201729-1');
 	</script>
-	<!-- Kursor.js -->
-	<script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+	<!-- Cursor CSS -->
+	<link href="css/pointer.css" rel="stylesheet">
 	<!-- Site Title and CSS -->
 	<title>Xinzhe Chai | Engineering and Statistics Student at Brown University</title>
 	<link rel="stylesheet" href="css/style.css">
@@ -252,12 +251,13 @@
 				alt="signature"> </a>
 	</div>
 </body>
-	<script src="https://unpkg.com/kursor"></script>
-	<script>
-		new kursor({
-			removeDefaultCursor: true,
-			type: 1,
-			color: '#011434'
-		})
-	</script>
+
+<script src="js/pointer.js"></script>
+<script>
+init_pointer({
+	ringSize: 15,
+	ringClickSize: 12,
+})
+</script>
+
 </html>
