@@ -40,3 +40,7 @@ a {
 div {
     cursor: none !important;
 }
+
+button {
+    cursor: none !important;
+}
