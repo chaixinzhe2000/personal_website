@@ -69,13 +69,13 @@
 						href="https://www.goodreads.com/api" class="link">GoodReads</a> and <a
 						href="https://openlibrary.org/developers/api" class="link">Open Library</a>, are used to provide
 					more relevant data for the book. All data stored in the database was obtained from the CS50 Web
-					Development <a href="https://docs.cs50.net/web/2020/x/projects/1/project1.html" class="link"> course
+					Development <a href="https://cs50.harvard.edu/web/2020/" class="link"> course
 						website</a>.
 				</div>
 			</div>
 			<img class="full-width-picture screely" src="../images/projects/goodreads/index.png" alt="GoodReads Front Page">
 			<div class="blog-text-wrapper">
-				<div class="blog-subtitle">Beginning</div>
+				<div class="blog-subtitle">At the Beginning</div>
 				<div class="paragraph">
 					In middle school, I had my first WordPress site called <i>DeltaTech</i>. As you might guess from the
 					name, it was a technology news site, and it automatically collects new stories from popular mainstream
@@ -84,13 +84,13 @@
 					the young me thought it would go big one day in the future. Sadly, it didn’t — no one other than my
 					parents and my closest friends has ever visited it. As I was able to generate neither traffic nor
 					revenue, I had to close the site after one year of running. Although it was a failed attempt, I knew
-					that one day I want to learn to program, so I can rebuild my dream website <i>on my own</i>.
+					that one day I want to learn to program, so I can rebuild my dream website on my own.
 				</div>
 				<div class="paragraph">
 					Though I haven’t really accomplished my "ambitious plan" yet, taking <a
 						href="https://cs50.harvard.edu/web/2020/" class="link">CS50 Web Development</a> in my freshman
 					summer was surely one step closer to "building a website on my own". So, here we are, my first
-					functional web application, coded by <i>myself</i>.
+					functional web application.
 				</div>
 
 				<div class="blog-subtitle">Functionality and Implementation</div>
@@ -99,11 +99,11 @@
 						<div class="paragraph">
 							In the lecture, I learned about User Session, SQL inquiries and Flask routing, and I am sure to put these three
 							things into use. Since Flask is a rather lightweight backend framework, I had to write the login and log out
-							functionality on my own (surely there is Flask-Login plugin I can use, but this is for the practice). My design
+							functionality on my own (there is Flask-Login plugin I can use, but this is for the practice). My design
 							is as the following: when a user fills out the registration form and hits the submit button, the POST request
 							will either verify the credentials with the database or create a new user if there isn’t a match. Then, the
-							session variable “is_logged_in” will change from “false” to “true”, allowing the user to visit the searching
-							page. The rather intuitive search page will allow users to input the information (ISBN, Book Name or Author) and
+							session variable “is_logged_in” will change from “false” to “true”, allowing the user to visit the search
+							page. The search page will allow users to input the information (ISBN, Book Name or Author) and
 							use the “LIKE” SQL command to find potential matches for the book.
 						</div>
 						<div class="paragraph">
@@ -121,7 +121,12 @@
 					</div>
 
 					<div class="blog-subtitle">Page Design</div>
-					<div class="horizontal-img-flexbox" style="margin-top: 1.2vw;">
+					<div class="paragraph">
+						To make the site feel welcoming and "book-like", I chose a ivory color as the background, and used matte green to
+						contrast with it. Most of the informations are in black, as I want to make sure they are clearly eligible. The
+						fonts I used are Josefin Sans and Crimson Pro, to represent headings and paragraphs respectively.
+					</div>
+					<div class="horizontal-img-flexbox" style="margin-top: 2.6vh;">
 						<div class="image-w-title-wrapper">
 							<img class="image-w-title" src="../images/projects/goodreads/search.png" alt="Search Page">
 							<div class="floating-label">
@@ -135,7 +140,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="horizontal-img-flexbox" style="margin-top: 1.5vw;">
+					<div class="horizontal-img-flexbox" style="margin-top: 3vh; margin-bottom: 6.5vh;">
 						<div class="image-w-title-wrapper">
 							<img class="image-w-title" src="../images/projects/goodreads/detailed.png" alt="Search Page">
 							<div class="floating-label">
@@ -150,60 +155,20 @@
 						</div>
 					</div>
 				</div>
-				<div class="blog-subtitle">Something Haven't Finished</div>
-				<div class="paragraph">
-					Figuring out the object-oriented design, understanding Neural Network and solving the bug brought
-					out by Array/ArrayList were probably the most difficult challenges I had to overcome in this
-					project. We started this project by writing the traditional Flappy Bird game, which has one bird
-					only and was fairly simple. However, as we moved on to implement the learning part of the project,
-					the specification asked us to model a population with 50 birds, each is equipped with a Neural
-					Network so that they can make independent decisions.
-				</div>
-				<div class="paragraph">
-					Initially, I decided to have a Population class controlling the life and death of those birds, a
-					NeuralNetwork class that includes all the thinking processes, and a Bird class that models the shape
-					and movement of birds. In my original implementation, my Bird class actually extends the
-					NeuralNetwork class. My idea was that if I extend the NeuralNetwork class, I could use all its
-					methods, which is equivalent to having an independent brain for every bird. Upon further thinking, I
-					found out that though the idea itself works, it was bad object-oriented design since Bird is not a
-					type of NeuralNetwork, and its containment diagram would not make any sense. I later on changed my
-					method and instantiated a NeuralNetwork instance in my Bird object — this also reflects the
-					real-world situation — now whenever I create a new Bird, it comes with a brain, the NeuralNetwork.
-				</div>
-				<div class="paragraph">
-					After I decided on the structure of the project, now it’s time to understand what Neural Networks
-					are. After some initial research, I realized that the simplest form of a Neural Network is just a
-					layer of input nodes, a hidden layer where weight is being added, and a final output layer. The
-					activation function then takes the value of the final out, and decides whether the birds should jump
-					or not. Though all numbers are randomly generated at the beginning, the birds will gradually evolve
-					if I select the weight of the best bird of the last round. By applying a very minimal amount of
-					random variation to the “smart weight”, the birds can eventually reach a point where they only die
-					by accident — like humans, birds also make “poor judgement” sometimes!
-				</div>
-				<div class="paragraph">
-					The hardest problem I encountered was to fix the bug induced by poor documentation. In my Population
-					class, I included 17 Array and ArrayList of different dimensions — some are for weights, some are
-					created to track the status of the bird, and the rest are used to record the statistics. Because
-					there were so many different Arrays, I struggled to differentiate each Array’s function, and the
-					specific data each dimension should hold. As a result, my application produces error messages at
-					every single keyframe, and my birds all die immediately upon spawning. I spent more than 10 hours
-					trying to debug using the println, however I yielded no result — the outputs are all random numbers
-					ranging from 0 to 1, and there is no way for me to identify the validity of the data. That was the
-					time I decided to rewrite the Population class; and this time, every time I created an Array, I
-					commented in the code about the type of data each dimension of the Array should hold. After a
-					complete overhaul, my birds finally started learning, and I was really proud.
-				</div>
 				<div class="blog-subtitle">Conclusion</div>
 				<div class="paragraph">
-					Evolution was definitely a highlight of my Object-oriented Programming (CS15) class. Afterall, I
-					think my biggest takeaway from this was that thorough planning beforehand is important, and the
-					proper documentation of variables and methods is critical. As the final project, I was able to put
-					everything I learned in the course — from EventHandler to Constructor Overloading — into use, and I
-					would highly recommend this project for the future generations of CS15 students.
+					Though the project is likely still in its beta stages—the registration process is far from secure, and there might
+					be some layout issues on mobile browsers—I am still very proud of what I did, as it reaffirmed my belief that one
+					day I can build useful and aesthetically pleasing tools to make everyone’s life easier.
 				</div>
-				<div class="blog-subtitle">Attachment</div>
 				<div class="paragraph">
-					<a href="../documents/evolution_write_up.pdf" class="link">Submitted Project Report (PDF)</a>
+					It allowed me to have a glimpse of full stack web development, and really opened the door for me to many exciting
+					opportunities. Later on, I used what I learned to build the portfolio that you are reading right now, got an
+					internship in web development, and joined <a href="https://www.fullstackatbrown.com/about" class="link">Full Stack
+						at Brown</a> to help students and organizations build their web presence.
+				</div>
+				<div class="paragraph">
+					Taking <a href="https://cs50.harvard.edu/web/2020/" class="link">CS50w</a> during the pandemic was probably the best decision I’ve made in 2020.
 				</div>
 			</div>
 		</div>
@@ -232,5 +197,4 @@
 		ringClickSize: 12,
 	})
 	</script>
-
 </html>

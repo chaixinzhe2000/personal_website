@@ -221,7 +221,7 @@ hr.f {
 .projects-flex-container {
 	@extend .page-gap;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	width: 70vw;
 	flex-wrap: wrap;

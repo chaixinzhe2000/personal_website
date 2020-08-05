@@ -208,7 +208,7 @@ hr.f {
 
 .projects-flex-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 70vw;
   flex-wrap: wrap;
