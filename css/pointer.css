@@ -6,7 +6,7 @@
     border: 2.5px solid #011434;
     position: fixed;
     border-radius: 4px;
-    z-index: 1;
+    z-index: 3;
     pointer-events: none;
     transition: border-color 0.5s;
 }
@@ -20,7 +20,7 @@
     border: 2px solid #011434;
     position: fixed;
     border-radius: 100px;
-    z-index: 2;
+    z-index: 4;
     pointer-events: none;
 }
 

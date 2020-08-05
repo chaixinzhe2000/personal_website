@@ -3,8 +3,7 @@
   margin-right: 15vw;
 }
 
-html,
-body {
+html {
   background-color: #e8f1f8;
 }
 
@@ -225,6 +224,22 @@ hr.f {
   background-color: #dde9f8;
 }
 
+.project-image-container {
+  position: relative;
+}
+
+.project-image-floating-label {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  background-color: white;
+  color: #011434;
+  padding: 15px 20px 13px;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
 .project-featured-image {
   display: block;
   margin-left: auto;
@@ -305,7 +320,7 @@ hr.f {
 .screely {
   margin-top: -50px;
   margin-bottom: -70px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .non-screely {
