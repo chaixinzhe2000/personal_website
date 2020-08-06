@@ -207,7 +207,7 @@ hr.f {
 
 .projects-flex-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 70vw;
   flex-wrap: wrap;
@@ -251,7 +251,8 @@ hr.f {
 .project-title {
   margin-top: 25px;
   margin-left: 1vw;
-  font-weight: 550;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 
 .project-info {
