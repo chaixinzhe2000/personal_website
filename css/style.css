@@ -4,7 +4,7 @@
 }
 
 html {
-  background-color: #e8f1f8;
+  background-color: white;
 }
 
 .flexbox-container {
@@ -49,7 +49,7 @@ a {
 #linkedin-icon {
   height: 1.5rem;
   margin-bottom: 1.5px;
-  fill: #e8f1f8;
+  fill: white;
 }
 
 #linkedin-icon:hover {
@@ -188,7 +188,7 @@ hr.f {
 
 #linkedin-icon-footer {
   height: 1.3rem;
-  fill: #e8f1f8;
+  fill: white;
 }
 
 #linkedin-icon-footer:hover {
