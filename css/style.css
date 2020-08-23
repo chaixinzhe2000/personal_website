@@ -4,7 +4,7 @@
 }
 
 html {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .flexbox-container {
@@ -49,7 +49,7 @@ a {
 #linkedin-icon {
   height: 1.5rem;
   margin-bottom: 1.5px;
-  fill: white;
+  fill: #ffffff;
 }
 
 #linkedin-icon:hover {
@@ -188,7 +188,7 @@ hr.f {
 
 #linkedin-icon-footer {
   height: 1.3rem;
-  fill: white;
+  fill: #ffffff;
 }
 
 #linkedin-icon-footer:hover {
@@ -221,7 +221,7 @@ hr.f {
 }
 
 .project-container:hover {
-  background-color: #dde9f8;
+  background-color: #f6f6f6;
 }
 
 .project-image-container {
