@@ -89,7 +89,7 @@ a {
 
 #greetings-wrapper {
   margin-top: 10vh;
-  width: 55%;
+  width: 40%;
   color: #011434;
 }
 
@@ -249,6 +249,7 @@ hr.f {
   overflow: hidden;
   position: relative;
   height: max-content;
+  min-height: 550px;
 }
 
 .img-card-text-wrapper {

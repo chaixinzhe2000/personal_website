@@ -261,8 +261,6 @@ hr.f {
 	row-gap: 20px;
 }
 
-
-
 .img-card {
     @extend %card-layout;
     @extend %card-interaction;
@@ -270,6 +268,7 @@ hr.f {
     overflow: hidden;
 	position: relative;
 	height: max-content;
+	min-height: 550px;
 }
 
 .img-card-text-wrapper {
@@ -309,7 +308,6 @@ hr.f {
     left: 25px;
     bottom: 25px;
 }
-
 
 // .projects-flex-container {
 // 	@extend .page-gap;
