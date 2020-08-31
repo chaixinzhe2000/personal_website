@@ -1,8 +1,43 @@
 // declaring variables
 $alternative: #e8f1f8;
-$paleblue: #ffffff;
+$paleblue: #f7f7f7;
 $paleblue-hover: #f6f6f6;
 $navy: #011434;
+
+// importing Crimson Text
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url(//db.onlinewebfonts.com/c/06d1b1518a180e5a9cca2c23401ec40a?family=Circular+Std+Bold);
+@import url(//db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=Circular+Std+Book);
+@import url(//db.onlinewebfonts.com/c/2b344f641cb4ebd77656f35154457c2d?family=Circular+Std+Black);
+@import url(//db.onlinewebfonts.com/c/280483fe8ab9beaf3337681ec871bff0?family=Circular+Std+Medium);
+@import url(//db.onlinewebfonts.com/c/00e35865e84eebb1b97e22ebffa948df?family=Circular+Std+Bold+Italic);
+@import url(//db.onlinewebfonts.com/c/33c0ccc21387ad531817bd465d94e67d?family=Circular+Std+Book+Italic);
+@import url(//db.onlinewebfonts.com/c/6c1578f983524180fa64138ee780cadf?family=Circular+Std+Black+Italic);
+@import url(//db.onlinewebfonts.com/c/186d64bc83bd1dc3aa4a4a4db40da5bc?family=Circular+Std+Medium+Italic);
+
+// Card type: image
+%card-layout {
+    height: 450px;
+    background-color: white;
+}
+
+// card interaction module, need shadow
+%card-interaction {
+    transition: transform 0.15s;
+    &:hover {
+        transform: translate(0px, -3px);
+        -webkit-box-shadow: 0px 2px 7px 1px rgba(168, 168, 168, 0.23);
+        -moz-box-shadow: 0px 2px 7px 1px rgba(168, 168, 168, 0.23);
+        box-shadow: 0px 2px 7px 1px rgba(168, 168, 168, 0.23);
+    }
+}
+
+%normal-text {
+    font-family: "Circular Std Book";
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+    line-height: 1.4rem;
+}
 
 .page-gap {
 	margin-left: 15vw;
@@ -33,7 +68,7 @@ a {
 }
 
 .navbar-text {
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Circular Std Bold";
 	margin-left: 1.7vw;
 	margin-top: 3px;
 	color: $navy;
@@ -64,14 +99,14 @@ a {
 }
 
 #greetings-wrapper {
-	margin-top: 40vh;
+	margin-top: 10vh;
 	@extend .page-gap;
 	width: 40%;
 	color: $navy;
 }
 
 #greetings-heading {
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Circular Std Bold";
 	font-weight: 600;
 	font-size: 2.5rem;
 	color: $navy;
@@ -79,14 +114,14 @@ a {
 
 #greetings-text {
 	margin-top: 20px;
-	margin-bottom: 15vh;
+	margin-bottom: 10vh;
 	font-family: "Crimson Text", serif;
 	color: $navy;
 	font-size: 1.5rem;
 }
 
 #signature {
-	height: 50px;
+	height: 40px;
 	margin-top: 5px;
 }
 
@@ -123,7 +158,7 @@ a {
 }
 
 .h1 {
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Circular Std Bold";
 	font-size: 1.6rem;
 	font-weight: 800;
 	width: 260px;
@@ -139,7 +174,7 @@ a {
 .fineprint {
 	color: grey;
 	text-transform: uppercase;
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Circular Std Bold";
 	font-size: 1rem;
 	font-weight: 300;
 	margin-bottom: -10px;
@@ -218,77 +253,135 @@ hr.f {
 	font-weight: 800;
 }
 
-.projects-flex-container {
-	@extend .page-gap;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	width: 70vw;
-	flex-wrap: wrap;
-	margin-top: 8vh;
+.projects-wrapper {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+	column-gap: 20px;
+	row-gap: 20px;
 }
 
-.project-container {
-	width: 23vw;
-	height: 650px;
-	margin-right: 0.32vw;
-}
 
-.project-container:hover {
-	background-color: $paleblue-hover;
-}
 
-.project-image-container {
+.img-card {
+    @extend %card-layout;
+    @extend %card-interaction;
+    background-color: white;
+    overflow: hidden;
 	position: relative;
+	height: max-content;
 }
 
-.project-image-floating-label {
-	position: absolute;
-	top: 20px;
-	left: 40px;
-	background-color: white;
-	color: $navy;
-	padding: 15px 20px 13px;
-	text-transform: uppercase;
-	font-family: "Josefin Sans", sans-serif;
-	font-weight: 700;
+.img-card-text-wrapper {
+    margin: 25px;
 }
 
-.project-featured-image {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1vw;
-	width: 21vw;
+.img-card-image-wrapper {
+    width: 393.33px;
+    height: 200px;
+    overflow: hidden;
 }
 
-.project-title {
-	@extend .subject-title;
-	margin-top: 25px;
-	margin-left: 1vw;
-	font-weight: 500;
-	font-size: 1.8rem;
+.img-card-img {
+    width: 100%;
+    object-fit: cover;
 }
 
-.project-info {
-	margin-left: 1vw;
-	margin-top: 15px;
-	color: grey;
-	text-transform: uppercase;
-	font-family: "Josefin Sans", sans-serif;
-	font-weight: 300;
-	font-size: 1rem;
+.img-card-item-type {
+    @extend %normal-text;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
-.project-description {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0.75vw;
-	width: 21vw;
-	font-size: 1.25rem;
-	font-family: "Crimson Text", serif;
+.img-card-text-title {
+    @extend %normal-text;
+    font-family: "Circular Std Bold";
 }
+
+.img-card-text-description {
+    @extend %normal-text;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.image-card-link-wrapper {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+
+
+// .projects-flex-container {
+// 	@extend .page-gap;
+// 	display: flex;
+// 	justify-content: flex-start;
+// 	align-items: center;
+// 	width: 70vw;
+// 	flex-wrap: wrap;
+// 	margin-top: 8vh;
+// }
+
+// .project-container {
+// 	width: 23vw;
+// 	height: 650px;
+// 	margin-right: 0.32vw;
+// }
+
+// .project-container:hover {
+// 	background-color: $paleblue-hover;
+// }
+
+// .project-image-container {
+// 	position: relative;
+// }
+
+// .project-image-floating-label {
+// 	position: absolute;
+// 	top: 20px;
+// 	left: 40px;
+// 	background-color: white;
+// 	color: $navy;
+// 	padding: 15px 20px 13px;
+// 	text-transform: uppercase;
+// 	font-family: "Circular Std Bold";
+// 	font-weight: 700;
+// }
+
+// .project-featured-image {
+// 	display: block;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	margin-top: 1vw;
+// 	width: 21vw;
+// }
+
+// .project-title {
+// 	@extend .subject-title;
+// 	margin-top: 25px;
+// 	margin-left: 1vw;
+// 	font-weight: 500;
+// 	font-size: 1.8rem;
+// }
+
+// .project-info {
+// 	margin-left: 1vw;
+// 	margin-top: 15px;
+// 	color: grey;
+// 	text-transform: uppercase;
+// 	font-family: "Circular Std Bold";
+// 	font-weight: 300;
+// 	font-size: 1rem;
+// }
+
+// .project-description {
+// 	display: block;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	margin-top: 0.75vw;
+// 	width: 21vw;
+// 	font-size: 1.25rem;
+// 	font-family: "Crimson Text", serif;
+// }
 
 .white-space-footer {
 	height: 15vh;
@@ -312,7 +405,7 @@ hr.f {
 }
 
 .blog-subtitle {
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Circular Std Bold";
 	font-size: 1.6rem;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -369,7 +462,7 @@ img {
 	padding-top: 19px;
 	text-align: center;
 	display: inline-block;
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Circular Std Bold";
 	font-size: 1rem;
 	font-weight: 800;
 	margin-left: 30px;
@@ -415,5 +508,5 @@ img {
 	color: white;
 	padding: 15px 20px 13px;
 	text-transform: uppercase;
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Circular Std Bold";
 }

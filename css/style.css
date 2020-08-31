@@ -1,10 +1,41 @@
-.page-gap, .projects-flex-container, .footer-flex, hr.f, .section-wrapper, #greetings-wrapper, .flexbox-container {
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@import url(//db.onlinewebfonts.com/c/06d1b1518a180e5a9cca2c23401ec40a?family=Circular+Std+Bold);
+@import url(//db.onlinewebfonts.com/c/2d98f490df6dc039774b101701ce3aba?family=Circular+Std+Book);
+@import url(//db.onlinewebfonts.com/c/2b344f641cb4ebd77656f35154457c2d?family=Circular+Std+Black);
+@import url(//db.onlinewebfonts.com/c/280483fe8ab9beaf3337681ec871bff0?family=Circular+Std+Medium);
+@import url(//db.onlinewebfonts.com/c/00e35865e84eebb1b97e22ebffa948df?family=Circular+Std+Bold+Italic);
+@import url(//db.onlinewebfonts.com/c/33c0ccc21387ad531817bd465d94e67d?family=Circular+Std+Book+Italic);
+@import url(//db.onlinewebfonts.com/c/6c1578f983524180fa64138ee780cadf?family=Circular+Std+Black+Italic);
+@import url(//db.onlinewebfonts.com/c/186d64bc83bd1dc3aa4a4a4db40da5bc?family=Circular+Std+Medium+Italic);
+.img-card {
+  height: 450px;
+  background-color: white;
+}
+
+.img-card {
+  transition: transform 0.15s;
+}
+.img-card:hover {
+  transform: translate(0px, -3px);
+  -webkit-box-shadow: 0px 2px 7px 1px rgba(168, 168, 168, 0.23);
+  -moz-box-shadow: 0px 2px 7px 1px rgba(168, 168, 168, 0.23);
+  box-shadow: 0px 2px 7px 1px rgba(168, 168, 168, 0.23);
+}
+
+.img-card-text-description, .img-card-text-title, .img-card-item-type {
+  font-family: "Circular Std Book";
+  font-size: 1.1rem;
+  letter-spacing: -0.5px;
+  line-height: 1.4rem;
+}
+
+.page-gap, .footer-flex, hr.f, .section-wrapper, #greetings-wrapper, .flexbox-container {
   margin-left: 15vw;
   margin-right: 15vw;
 }
 
 html {
-  background-color: #ffffff;
+  background-color: #f7f7f7;
 }
 
 .flexbox-container {
@@ -26,7 +57,7 @@ a {
 }
 
 .navbar-text {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Circular Std Bold";
   margin-left: 1.7vw;
   margin-top: 3px;
   color: #011434;
@@ -49,7 +80,7 @@ a {
 #linkedin-icon {
   height: 1.5rem;
   margin-bottom: 1.5px;
-  fill: #ffffff;
+  fill: #f7f7f7;
 }
 
 #linkedin-icon:hover {
@@ -57,13 +88,13 @@ a {
 }
 
 #greetings-wrapper {
-  margin-top: 40vh;
-  width: 40%;
+  margin-top: 10vh;
+  width: 55%;
   color: #011434;
 }
 
 #greetings-heading, .headline {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Circular Std Bold";
   font-weight: 600;
   font-size: 2.5rem;
   color: #011434;
@@ -71,14 +102,14 @@ a {
 
 #greetings-text {
   margin-top: 20px;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
   font-family: "Crimson Text", serif;
   color: #011434;
   font-size: 1.5rem;
 }
 
 #signature {
-  height: 50px;
+  height: 40px;
   margin-top: 5px;
 }
 
@@ -112,13 +143,13 @@ a {
 }
 
 .h1 {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Circular Std Bold";
   font-size: 1.6rem;
   font-weight: 800;
   width: 260px;
 }
 
-.subject-title, .project-title {
+.subject-title {
   font-family: "Crimson Text", serif;
   font-style: italic;
   font-size: 1.6rem;
@@ -128,7 +159,7 @@ a {
 .fineprint, .project-description-fineprint {
   color: grey;
   text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Circular Std Bold";
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: -10px;
@@ -188,7 +219,7 @@ hr.f {
 
 #linkedin-icon-footer {
   height: 1.3rem;
-  fill: #ffffff;
+  fill: #f7f7f7;
 }
 
 #linkedin-icon-footer:hover {
@@ -205,74 +236,54 @@ hr.f {
   font-weight: 800;
 }
 
-.projects-flex-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 70vw;
-  flex-wrap: wrap;
-  margin-top: 8vh;
+.projects-wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
-.project-container {
-  width: 23vw;
-  height: 650px;
-  margin-right: 0.32vw;
-}
-
-.project-container:hover {
-  background-color: #f6f6f6;
-}
-
-.project-image-container {
-  position: relative;
-}
-
-.project-image-floating-label {
-  position: absolute;
-  top: 20px;
-  left: 40px;
+.img-card {
   background-color: white;
-  color: #011434;
-  padding: 15px 20px 13px;
-  text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
+  overflow: hidden;
+  position: relative;
+  height: max-content;
 }
 
-.project-featured-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1vw;
-  width: 21vw;
+.img-card-text-wrapper {
+  margin: 25px;
 }
 
-.project-title {
-  margin-top: 25px;
-  margin-left: 1vw;
-  font-weight: 500;
-  font-size: 1.8rem;
+.img-card-image-wrapper {
+  width: 393.33px;
+  height: 200px;
+  overflow: hidden;
 }
 
-.project-info {
-  margin-left: 1vw;
-  margin-top: 15px;
-  color: grey;
-  text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
+.img-card-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-card-item-type {
   font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-.project-description {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.75vw;
-  width: 21vw;
-  font-size: 1.25rem;
-  font-family: "Crimson Text", serif;
+.img-card-text-title {
+  font-family: "Circular Std Bold";
+}
+
+.img-card-text-description {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.image-card-link-wrapper {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
 }
 
 .white-space-footer {
@@ -296,7 +307,7 @@ hr.f {
 }
 
 .blog-subtitle {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Circular Std Bold";
   font-size: 1.6rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -353,7 +364,7 @@ img {
   padding-top: 19px;
   text-align: center;
   display: inline-block;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Circular Std Bold";
   font-size: 1rem;
   font-weight: 800;
   margin-left: 30px;
@@ -399,7 +410,7 @@ img {
   color: white;
   padding: 15px 20px 13px;
   text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Circular Std Bold";
 }
 
 /*# sourceMappingURL=style.css.map */
