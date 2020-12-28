@@ -1,0 +1,16 @@
+{
+  "name": "new_personal_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind-build": "tailwindcss build css/styles.css -o css/tailwind.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "tailwindcss": "^2.0.2"
+  }
+}
