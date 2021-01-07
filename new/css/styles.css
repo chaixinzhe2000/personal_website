@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --primary: #212529;
+  --primary-shadow-1: #171a1d;
+  --primary-shadow-2: #2b3035;
+  --contrast: #ffffff;
+}
+
 #main {
   width: min(1500px, 100vw);
   margin-left: auto;
@@ -8,7 +15,7 @@
 #main-header {
   width: 100%;
   height: 500px;
-  background-color: #212529;
+  background-color: var(--primary);
 }
 
 #signature {
@@ -16,32 +23,31 @@
 }
 
 .nav-button {
+  color: var(--contrast);
   font-family: "SF Mono Regular";
   font-size: 13px;
   font-weight: 800;
-  color: white;
   border-color: transparent;
-  padding: 7px 10px;
-  margin-right: 20px;
+  padding: 7px 15px;
+  margin-right: 5px;
   border-radius: 4px;
 }
 
 .nav-button:hover {
-  background: #212529;
-  box-shadow: 5px 5px 10px #171a1d, -5px -5px 10px #2b3035;
+  background: var(--primary);
+  box-shadow: 5px 5px 10px var(--primary-shadow-1), -5px -5px 10px var(--primary-shadow-2);
 }
 
 .nav-button:active {
-  background: #384755;
-  background: #212529;
-  box-shadow: inset 5px 5px 10px #171a1d, inset -5px -5px 10px #2b3035;
+  background: var(--primary);
+  box-shadow: inset 5px 5px 10px var(--primary-shadow-1), inset -5px -5px 10px var(--primary-shadow-2);
   outline: none;
   border: none;
 }
 
 .nav-button:focus {
-  color: white;
-  background-color: #212529;
+  color: var(--contrast);
+  background-color: var(--primary);
   outline: none;
   border: none;
 }
