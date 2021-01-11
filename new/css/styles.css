@@ -3,7 +3,17 @@
   --primary: #212529;
   --primary-shadow-1: #171a1d;
   --primary-shadow-2: #2b3035;
-  --contrast: #ffffff;
+  --heading: #ffffff;
+  --supplement-text: #9ca3af;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--heading);
 }
 
 #main {
@@ -17,7 +27,7 @@
 }
 
 .body {
-  background-color: #EDF0F2;
+  background-color: #edf0f2;
 }
 
 #main-header {
@@ -31,7 +41,7 @@
 }
 
 .nav-button {
-  color: var(--contrast);
+  color: var(--heading);
   font-family: "SF Mono Regular";
   font-size: 13px;
   font-weight: 800;
@@ -54,7 +64,7 @@
 }
 
 .nav-button:focus {
-  color: var(--contrast);
+  color: var(--heading);
   background-color: var(--primary);
   outline: none;
   border: none;
@@ -67,6 +77,85 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
+}
+
+.header-intro {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-intro-wrapper {
+  width: 60%;
+}
+
+.main-intro {
+  color: var(--supplement-text);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.main-caption {
+  font-family: "Inter", sans-serif;
+  color: var(--heading);
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: -10px;
+}
+
+.main-social-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.social-icon {
+  width: 30px;
+}
+
+a.social-link {
+  font-family: "SF Mono Regular";
+  color: var(--supplement-text);
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 15px;
+  font-weight: 400;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.profile-arrow-color {
+  stroke: var(--supplement-text);
+}
+
+.profile-arrow-position {
+  margin-left: 180px;
+  margin-top: -50px;
+}
+
+.profile-annotation {
+  font-family: "Covered By Your Grace", cursive;
+  color: var(--supplement-text);
+  margin-left: 220px;
+  margin-top: -80px;
+  width: min-content;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.main-text {
+  color: var(--supplement-text);
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=styles.css.map */
