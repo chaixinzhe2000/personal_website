@@ -116,9 +116,18 @@ a:hover {
 	align-items: baseline;
 }
 
+#github-icon {
+	margin-top: -28px;
+}
+
+#linkedin-icon {
+	margin-top: 21px;
+}
+
 .social-icon {
-	width: 30px;
-	stroke: var(--supplement-text)
+	width: 25px;
+	stroke: var(--supplement-text);
+	margin-right: 20px;
 }
 
 a.social-link {
