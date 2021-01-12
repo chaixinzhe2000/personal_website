@@ -36,13 +36,25 @@ const onSetTheme = (themeId) => {
 }
 
 function init() {
-	// $(".nav-button").on('mouseenter', function () {
-	//     $(".nav-button").addClass("shadow-md");
-	// });
+	$(".profile-annotation").on('mouseenter', function () {
+		$(".profile-annotation").addClass("stroke-heading-color");
+		$(".profile-arrow-color").addClass("stroke-heading-color");
+	});
 
-	// $(".nav-button").on('mouseleave', function () {
-	//     $(".nav-button").removeClass("shadow-md");
-	// });
+	$(".profile-annotation").on('mouseleave', function () {
+		$(".profile-annotation").removeClass("stroke-heading-color");
+		$(".profile-arrow-color").removeClass("stroke-heading-color");
+	});
+	$(".profile-arrow-color").on('mouseenter', function () {
+		$(".profile-annotation").addClass("stroke-heading-color");
+		$(".profile-arrow-color").addClass("stroke-heading-color");
+	});
+
+	$(".profile-arrow-color").on('mouseleave', function () {
+		$(".profile-annotation").removeClass("stroke-heading-color");
+		$(".profile-arrow-color").removeClass("stroke-heading-color");
+	});
+
 	var themeId = Math.floor(Math.random() * 100) % 3;
 	onSetTheme(themeId);
 }

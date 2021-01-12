@@ -9,6 +9,14 @@
 	--supplement-text: #9ca3af;
 }
 
+%card-interaction {
+	transition: transform 0.15s;
+
+	&:hover {
+		transform: translate(0px, -2px);
+	}
+}
+
 a {
 	text-decoration: underline;
 	font-weight: 600;
@@ -34,7 +42,7 @@ a:hover {
 
 #main-header {
 	width: 100%;
-	height: 500px;
+	height: max-content;
 	background-color: var(--primary);
 }
 
@@ -83,17 +91,18 @@ a:hover {
 }
 
 .header-intro {
-	width: 75%;
+	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 70px;
+	padding-top: 70px;
+	padding-bottom: 130px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
 .main-intro-wrapper {
-	width: 60%;
+	width: 56%;
 }
 
 .main-intro {
@@ -101,6 +110,7 @@ a:hover {
 	font-family: "Inter", sans-serif;
 	font-size: 20px;
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .main-caption {
@@ -117,7 +127,7 @@ a:hover {
 }
 
 #github-icon {
-	margin-top: -28px;
+	margin-top: -27px;
 }
 
 #linkedin-icon {
@@ -128,6 +138,11 @@ a:hover {
 	width: 25px;
 	stroke: var(--supplement-text);
 	margin-right: 20px;
+	@extend %card-interaction;
+}
+
+.social-icon:hover {
+	stroke: var(--heading);
 }
 
 a.social-link {
@@ -140,10 +155,18 @@ a.social-link {
 
 }
 
+.stroke-heading-color {
+	stroke: var(--heading) !important;
+	color: var(--heading) !important;
+}
+
 .profile-image {
-	width: 200px;
-	height: 200px;
+	width: 230px;
+	height: 230px;
 	border-radius: 10px;
+	margin-top: 15px;
+	margin-left: 20px;
+	z-index: 1;
 }
 
 .profile-arrow-color {
@@ -151,17 +174,18 @@ a.social-link {
 }
 
 .profile-arrow-position {
-	margin-left: 180px;
+	margin-left: 225px;
 	margin-top: -50px;
+	z-index: 9999;
 }
 
 .profile-annotation {
 	font-family: "Covered By Your Grace", cursive;
 	color: var(--supplement-text);
-	margin-left: 220px;
-	margin-top: -80px;
-	width: min-content;
-	font-size: 20px;
+	margin-left: 275px;
+	margin-top: -78px;
+	width: 90px;
+	font-size: 23px;
 	line-height: 24px;
 }
 
@@ -171,3 +195,4 @@ a.social-link {
 	font-size: 18px;
 	font-weight: 400;
 }
+
