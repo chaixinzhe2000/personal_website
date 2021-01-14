@@ -14,12 +14,16 @@
   transform: translate(0px, -2px);
 }
 
-a {
+a:hover {
+  color: var(--heading);
+}
+
+.main-intro > a {
   text-decoration: underline;
   font-weight: 600;
 }
 
-a:hover {
+.main-intro > a:hover {
   color: var(--heading);
 }
 
@@ -155,8 +159,8 @@ a.social-link {
 }
 
 .profile-image {
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
   border-radius: 10px;
   margin-top: 15px;
   margin-left: 20px;
@@ -168,7 +172,7 @@ a.social-link {
 }
 
 .profile-arrow-position {
-  margin-left: 225px;
+  margin-left: 240px;
   margin-top: -50px;
   z-index: 9999;
 }
@@ -176,8 +180,8 @@ a.social-link {
 .profile-annotation {
   font-family: "Covered By Your Grace", cursive;
   color: var(--supplement-text);
-  margin-left: 275px;
-  margin-top: -78px;
+  margin-left: 288px;
+  margin-top: -80px;
   width: 90px;
   font-size: 23px;
   line-height: 24px;
